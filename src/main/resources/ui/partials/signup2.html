@@ -1,0 +1,41 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content login-body">
+    <h2>Create an Aegis Account</h2>
+    <form ng-submit="doSignup2()">
+        <table>
+            <tr>
+                <td colspan="2" class="error" ng-show="error">{{error}}</td>
+            </tr>
+            <tr>
+                <td><label>First Name:</label></td>
+                <td><input type="text" ng-model="firstname"/></td>
+            </tr>
+            <tr>
+                <td><label>Last Name:</label></td>
+                <td><input type="text" ng-model="lastname"/></td>
+            </tr>
+            <tr>
+                <td><label>Verification Code:</label></td>
+                <td><input type="text" ng-model="code"/></td>
+            </tr>
+            <tr>
+                <td><label>Create New Password:</label></td>
+                <td><input type="password" ng-model="password" ng-class="passwordClass"/></td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><font color="red"><b>WARNING: Do NOT forget this password. Without it, your account information is irretrievable.</b></font></td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>We recommend creating a password of at least length 16.</b></td>
+            </tr>
+            <!--<tr>
+            <td><label for="password">Confirm Password:</label></td>
+            <td><input type="password" id="password"/></td>
+            </tr>-->
+        </table>
+        <button type="submit">Sign Up</button>
+    </form>
+</span>
+

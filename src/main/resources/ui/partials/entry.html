@@ -1,0 +1,31 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content">
+  <h2></h2>
+  <form>
+    <table>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name"/></td>
+      </tr>
+      <tr>
+        <td><label for="email">Username:</label></td>
+        <td><input type="text" id="email"/></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="{{password_field_type}}" id="password"/></td>
+        <td>
+          <button ng-show="!show_password" ng-click="show_password = true">Show Password</button>
+          <button ng-show="show_password" ng-click="show_password = false">Hide Password</button>
+        </td>
+      </tr>
+
+    </table>
+    <div class="button">
+      <button type="submit">Update</button>
+    </div>
+  </form>
+</span>
+<div class="login-body">
+</div>

@@ -1,0 +1,16 @@
+<span class="sidebar">
+    <div class="top-space"></div>
+    <div ng-hide="loggedIn"><a href="#/login">Login</a></div>
+    <div ng-show="loggedIn"><a href ng-click="logout()">Logout</a></div>
+    <div ng-hide="loggedIn"><a href="#/signup1">Signup via Email</a></div>
+    <div ng-hide="loggedIn"><a href="#/signup2">Complete Signup</a></div>
+    <div ng-show="loggedIn"><a href="#/teams">Modify Teams</a></div>
+    <div ng-show="loggedIn"><a href="#/logs/user">My Logs</a></div>
+    <div ng-show="loggedIn"><a href="#/publickey">My Public Key</a></div>
+    <div ng-show="loggedIn"><a href="#/changepassword">Edit Master Password</a></div>
+    <div ng-show="loggedIn"><a href="#/deleteuser">Delete Account</a></div>
+
+    <div ng-show="loggedIn" class="team-list">
+        <div ng-repeat="team in teams"><a href="#/vault/{{team.id}}">#{{team.teamname}}</a></div>
+    </div>
+</span>

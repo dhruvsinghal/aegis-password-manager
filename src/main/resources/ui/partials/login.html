@@ -1,0 +1,18 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content login-body">
+    <h2>Aegis Login</h2>
+    <form ng-submit="doLogin()">
+        <table>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" ng-model="email"/></td>
+            </tr>
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type="password" ng-model="password"/></td>
+            </tr>
+        </table>
+        <button type="submit">Log In</button>
+    </form>
+</span>

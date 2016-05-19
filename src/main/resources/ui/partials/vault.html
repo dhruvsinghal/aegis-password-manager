@@ -1,0 +1,35 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content entry-list">
+    <h2>Your Password Vault</h2>
+    <div class="vault-entry">
+        <span class="name">Title</span>
+        <span class="username">Username</span>
+        <span class="password">Password</span>
+    </div>
+    <div class="vault-entry" ng-repeat="entry in entries">
+        <input class="name" ng-model="entry.title">
+        <input class="username" ng-model="entry.username">
+        <span class="password" ng-show="!entry.show_password">******</span>
+        <input class="password" ng-show="entry.show_password" ng-model="entry.password">
+        <button class="show-button" ng-show="!entry.show_password" ng-click="entry.show_password=true">Show Password
+        </button>
+        <button class="hide-button" ng-show="entry.show_password" ng-click="entry.show_password=false">Hide Password
+        </button>
+        <button class="edit-button"
+                ng-show="currentTeam.permissions == 'ADMIN' || currentTeam.permissions == 'WRITE'"
+                ng-click="saveEntry(entry.id, entry.title, entry.username, entry.password)">
+            Save Changes
+        </button>
+        <button class="delete-button"
+                ng-show="currentTeam.permissions == 'ADMIN' || currentTeam.permissions == 'WRITE'"
+                ng-click="deleteEntry(entry.id)">Delete</button>
+    </div>
+    <div ng-show="currentTeam.permissions == 'ADMIN' || currentTeam.permissions == 'WRITE'"
+         class="vault-entry">
+        <input class="name" ng-model="newTitle">
+        <input class="username" ng-model="newUsername">
+        <input class="password" type="password" ng-model="newPassword">
+        <button class="add-button" ng-click="addEntry()">Add</button>
+    </div>
+</span>

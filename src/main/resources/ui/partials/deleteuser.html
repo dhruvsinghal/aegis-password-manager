@@ -1,0 +1,14 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content login-body">
+    <h2>Account Deletion</h2>
+    <form ng-submit="deleteUser()">
+        <table>
+            <tr>
+                <td><label>Master Password:</label></td>
+                <td><input type="password" ng-model="confirmMasterPassword"/></td>
+            </tr>
+        </table>
+        <button type="submit">Delete Account</button>
+    </form>
+</span>

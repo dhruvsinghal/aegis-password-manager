@@ -1,0 +1,55 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content login-body">
+    <h2>Create a new Team</h2>
+
+    <label>Team Name:</label>
+    <input type="text" ng-model="creation.teamName"/>
+    <button ng-click="createTeam()">Create Team</button>
+    <br/>
+
+    <h2>Modify Existing Teams</h2>
+    <select ng-model="selectedTeam"
+            ng-options="team.id as team.teamname for team in teams">
+        <option value="" selected hidden/>
+    </select>
+
+    <a href="#/logs/teams/{{selectedTeam}}">View Logs</a>
+
+    <br>
+
+    <button ng-click="deleteTeam()">Delete Team</button>
+
+    <table>
+        <tr ng-repeat="user in users">
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <select ng-model="user.permission"
+                        ng-change="permissionChanged(user.email, user.permission)">
+                    <option value="READ">Read</option>
+                    <option value="WRITE">Write</option>
+                    <option value="ADMIN">Admin</option>
+                </select>
+            </td>
+            <td>
+                <button ng-click="deleteUser(user.id)">Remove</button>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Email Address:</td>
+            <td><input ng-model="newUserEmail"></td>
+            <td>
+                <select ng-model="newUserPermission">
+                    <option value="READ">Read</option>
+                    <option value="WRITE">Write</option>
+                    <option value="ADMIN">Admin</option>
+                </select>
+            </td>
+            <td>
+                <button ng-click="addUser()">Add User</button>
+            </td>
+        </tr>
+    </table>
+</span>

@@ -1,0 +1,17 @@
+<div ng-include src="'partials/sidebar.html'"></div>
+
+<span class="content login-body">
+    <h2>{{logTypeName}}</h2>
+    <table class="log-table">
+        <tr>
+            <th>Time</th>
+            <th>IP Address</th>
+            <th>Message</th>
+        </tr>
+        <tr ng-repeat="log in logs">
+            <td>{{log.time}}</td>
+            <td>{{log.ipAddress}}</td>
+            <td>{{log.message}}</td>
+        </tr>
+    </table>
+</span>

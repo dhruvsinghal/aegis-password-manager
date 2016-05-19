@@ -1,0 +1,116 @@
+body {
+    /* Background pattern from subtlepatterns.com */
+    background-image: url("background.png");
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    /* background-color: #e6faff; */
+    position: relative;
+    background-image: url("white_texture.png");
+    background-repeat: repeat;
+    width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+form table {
+    padding-bottom: 20px;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.sidebar {
+    position: absolute;
+    padding-left: 20px;
+    width: 180px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #550370;
+    color: #FFFFFF;
+}
+
+.sidebar a {
+    color: #FFFFFF;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.content {
+    position: absolute;
+    left: 210px;
+    width: calc(100% - 210px);
+}
+
+.entry-list .name {
+    width: 100px;
+    display: inline-block;
+}
+
+.entry-list .username {
+    width: 100px;
+    display: inline-block;
+}
+
+.entry-list .password {
+    width: 100px;
+    display: inline-block;
+}
+
+.entry-list .show-button, .entry-list .hide-button {
+    width: 150px;
+}
+
+.vault-entry {
+    margin-bottom: 10px;
+}
+.vault-entry span {
+    padding-left: 5px;
+    margin: 0;
+}
+
+.top-space {
+    height: 20px;
+    width: 100%;
+}
+
+.team-list {
+    padding-top: 20px;
+}
+
+.team-list a {
+    color: gold;
+}
+
+table.log-table th, table.log-table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.error {
+    color: red;
+}
+
+.strong-password {
+    background-color: lawngreen;
+}
+
+.weak-password {
+    background-color: orangered;
+}
